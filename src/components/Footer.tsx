@@ -6,25 +6,25 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16">
           <div className="md:col-span-1">
-            <h4 className="text-2xl text-secondary-container mb-6 font-display">VAGAMON 4X</h4>
+            <h2 className="text-2xl text-secondary-container mb-6 font-display">VAGAMON 4X</h2>
             <p className="text-on-primary-container opacity-80 mb-8 max-w-xs leading-relaxed">
               Redefining investment through verdant luxury and strategic growth in the heart of Kerala.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 bg-primary-container rounded-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all">
+              <a href="#" aria-label="Follow Vagamon 4X on Instagram" className="p-2 bg-primary-container rounded-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="p-2 bg-primary-container rounded-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all">
+              <a href="#" aria-label="Follow Vagamon 4X on Facebook" className="p-2 bg-primary-container rounded-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="p-2 bg-primary-container rounded-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all">
+              <a href="#" aria-label="Visit Vagamon 4X Website" className="p-2 bg-primary-container rounded-sm hover:bg-secondary-container hover:text-on-secondary-container transition-all">
                 <Globe size={20} />
               </a>
             </div>
           </div>
 
           <div className="md:col-span-1">
-            <h5 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-secondary-container">Contact Us</h5>
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-secondary-container">Contact Us</h3>
             <ul className="space-y-6">
               <li className="flex items-center gap-4 text-on-primary-container">
                 <Phone size={20} className="text-secondary-container" />

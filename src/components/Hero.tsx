@@ -39,7 +39,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12"
         >
-          <button className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-sm font-bold uppercase tracking-widest shadow-xl hover:bg-gold transition-colors">
+          <button 
+            aria-label="Explore investment opportunity in Vagamon 4X"
+            className="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-sm font-bold uppercase tracking-widest shadow-xl hover:bg-gold transition-colors"
+          >
             Explore Opportunity
           </button>
           <div className="flex items-center text-white gap-2 group cursor-default">

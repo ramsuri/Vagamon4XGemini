@@ -24,7 +24,10 @@ export default function Attractions() {
             <h2 className="text-3xl md:text-4xl text-primary font-display">Explore the Magic of Vagamon</h2>
             <p className="text-on-surface-variant mt-2 text-lg">Discover the serenity of Kerala's most enchanting hill station.</p>
           </div>
-          <button className="hidden md:block border-b border-primary text-primary font-bold uppercase text-xs tracking-widest pb-1 hover:text-secondary hover:border-secondary transition-colors">
+          <button 
+            aria-label="View all attractions in Vagamon"
+            className="hidden md:block border-b border-primary text-primary font-bold uppercase text-xs tracking-widest pb-1 hover:text-secondary hover:border-secondary transition-colors"
+          >
             View All Attractions
           </button>
         </div>
@@ -40,13 +43,13 @@ export default function Attractions() {
             >
               <img 
                 src={attr.img} 
-                alt={attr.title}
+                alt={`Scenery of ${attr.title} in Vagamon, Kerala`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent flex flex-col justify-end p-8">
-                <h4 className="text-white text-2xl font-display group-hover:translate-x-2 transition-transform duration-300">
+                <h3 className="text-white text-2xl font-display group-hover:translate-x-2 transition-transform duration-300">
                   {attr.title}
-                </h4>
+                </h3>
               </div>
             </motion.div>
           ))}

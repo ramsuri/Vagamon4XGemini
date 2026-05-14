@@ -23,13 +23,14 @@ export default function Header() {
               {item}
             </a>
           ))}
-          <button className="ml-4 bg-primary text-on-primary px-8 py-3 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-primary-container transition-all scale-100 active:scale-95 shadow-sm">
+          <a href="#visit" className="ml-4 bg-primary text-on-primary px-8 py-3 rounded-sm font-bold uppercase text-xs tracking-widest hover:bg-primary-container transition-all scale-100 active:scale-95 shadow-sm text-center">
             Book Site Visit
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
         <button 
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="md:hidden text-primary p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -54,9 +55,13 @@ export default function Header() {
               {item}
             </a>
           ))}
-          <button className="bg-primary text-on-primary px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest">
+          <a 
+            href="#visit" 
+            className="bg-primary text-on-primary px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest text-center"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Book Site Visit
-          </button>
+          </a>
         </motion.div>
       )}
     </header>

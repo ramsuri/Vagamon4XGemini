@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Benefits from './components/Benefits';
 import Attractions from './components/Attractions';
+import InvestmentDetails from './components/InvestmentDetails';
 import VisitFromKochi from './components/VisitFromKochi';
 import Footer from './components/Footer';
 import { MessageSquare, Phone, ArrowRight } from 'lucide-react';
@@ -20,6 +21,7 @@ export default function App() {
         <Hero />
         <Benefits />
         <Attractions />
+        <InvestmentDetails />
         <VisitFromKochi />
       </main>
       <Footer />
@@ -43,7 +45,7 @@ export default function App() {
           CALL
         </a>
         <a 
-          href="#investment"
+          href="#visit"
           className="flex-[2] flex items-center justify-center bg-primary text-on-primary font-bold py-3 text-xs tracking-widest rounded-sm shadow-lg group"
         >
           BOOK VISIT
