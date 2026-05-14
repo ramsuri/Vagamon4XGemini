@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
+
+  --color-primary: #061b0e;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1b3022;
+  --color-on-primary-container: #819986;
+
+  --color-secondary: #735c00;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fed65b;
+  --color-on-secondary-container: #745c00;
+
+  --color-surface: #fbf9f4;
+  --color-on-surface: #1b1c19;
+  --color-on-surface-variant: #434843;
+  --color-surface-container: #f0eee9;
+  --color-surface-container-low: #f5f3ee;
+
+  --color-gold: #e9c349;
+  --color-gold-dim: #ad9440;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+.gold-border {
+  border-top: 1.5px solid var(--color-gold);
+}
+
+.bg-mist {
+  background: linear-gradient(rgba(27, 48, 34, 0.4), rgba(27, 48, 34, 0.4));
+}
+
+.glass-nav {
+  @apply bg-surface/80 backdrop-blur-md;
+}
