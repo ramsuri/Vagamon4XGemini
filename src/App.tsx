@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Benefits from './components/Benefits';
 import Attractions from './components/Attractions';
+import InteractiveMap from './components/InteractiveMap';
 import InvestmentDetails from './components/InvestmentDetails';
 import VisitFromKochi from './components/VisitFromKochi';
 import Footer from './components/Footer';
@@ -15,12 +16,13 @@ import { motion } from 'motion/react';
 
 export default function App() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen font-body text-primary bg-surface selection:bg-gold/30">
       <Header />
       <main>
         <Hero />
         <Benefits />
         <Attractions />
+        <InteractiveMap />
         <InvestmentDetails />
         <VisitFromKochi />
       </main>

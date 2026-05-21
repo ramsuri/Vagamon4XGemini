@@ -1,9 +1,23 @@
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+    if (isMenuOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-on-surface-variant/10 shadow-sm">
@@ -14,7 +28,7 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {['Benefits', 'Attractions', 'Investment', 'Features'].map((item) => (
+          {['Benefits', 'Attractions', 'Location', 'Investment'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -45,7 +59,7 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-surface border-b border-on-surface-variant/10 px-4 pt-2 pb-6 flex flex-col gap-4 shadow-lg"
         >
-          {['Benefits', 'Attractions', 'Investment', 'Features'].map((item) => (
+          {['Benefits', 'Attractions', 'Location', 'Investment'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
